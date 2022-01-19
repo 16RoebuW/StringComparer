@@ -16,5 +16,10 @@ namespace StringComparer
         {
             InitializeComponent();
         }
+
+        private void tbxStringY_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
