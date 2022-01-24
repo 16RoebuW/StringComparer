@@ -29,7 +29,7 @@ namespace StringComparer
 
         public bool ValidateString(string input)
         {
-            if (input.Length >= 1024)
+            if (input.Length > 1024)
                 return false;
             if (input == "")
                 return false;
