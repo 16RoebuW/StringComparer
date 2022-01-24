@@ -17,9 +17,30 @@ namespace StringComparer
             InitializeComponent();
         }
 
-        private void tbxStringY_TextChanged(object sender, EventArgs e)
+        private void btnCalculate_Click(object sender, EventArgs e)
         {
+            if (ValidateString(tbxStringX.Text) && ValidateString(tbxStringY.Text))
+            { }
+            else
+            {
+                MessageBox.Show("Please enter a valid string under 1025 characters in length", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        public bool ValidateString(string input)
+        {
+            if (input.Length >= 1024)
+                return false;
+            if (input == "")
+                return false;
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[i] > 127)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

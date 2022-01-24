@@ -63,7 +63,6 @@
             this.tbxStringY.Size = new System.Drawing.Size(519, 53);
             this.tbxStringY.TabIndex = 2;
             this.tbxStringY.Text = "String Y input";
-            this.tbxStringY.TextChanged += new System.EventHandler(this.tbxStringY_TextChanged);
             // 
             // btnCalculate
             // 
@@ -74,6 +73,7 @@
             this.btnCalculate.TabIndex = 3;
             this.btnCalculate.Text = "Calculate!";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // tbxOutput
             // 
